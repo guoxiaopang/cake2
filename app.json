@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/celldetail/celldetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1e90ff",
+    "navigationBarTitleText": "青匠厨房",
+    "navigationBarTextStyle":"white"
+  }
+}

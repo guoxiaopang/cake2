@@ -1,0 +1,23 @@
+/**app.wxss**/
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+.flex-wrap{
+	display: flex;
+}
+
+.flex-item{
+	flex: 1;  /*表示都有相同的长度 忽略他们的内容*/
+}
+
+.flex-wrap.flex-direction-col{
+	flex-direction: column; /* 崔志显示*/
+}
+
+.flex-wrap.flex-direction-row{
+	flex-direction: row;
+}
