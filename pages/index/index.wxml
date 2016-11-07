@@ -10,6 +10,7 @@
     </block>
 </swiper>
  
+	
  <!--左边菜单-->
 	<view class="aside flex-wrap flex-direction-col">
 		<block wx:for="{{navList}}" wx:key="leftList">

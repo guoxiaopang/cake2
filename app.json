@@ -9,5 +9,15 @@
     "navigationBarBackgroundColor": "#1e90ff",
     "navigationBarTitleText": "青匠厨房",
     "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "新主页"
+    }]
   }
 }

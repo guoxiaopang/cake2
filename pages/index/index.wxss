@@ -3,6 +3,10 @@
 {
   width: 100%;
 }
+.scroll-view_H{
+	width: 5rem;
+	background-color: red;
+}
 
 /*左边菜品分类*/
 .aside{
