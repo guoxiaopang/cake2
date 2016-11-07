@@ -5,6 +5,7 @@ Page({
 		curIndex:0,
 		cart:[],
 		cartTotal:0,
+		totalPrice:1234.12,
 
 		imgUrls: [
      	 'https://pixabay.com/static/uploads/photo/2016/10/16/20/10/sunset-1746167_960_720.jpg',
@@ -194,7 +195,7 @@ Page({
   },
   selectDish : function(e)
   {
-	  wx.navigateTo({url:'/pages/celldetail/celldetail'}); 
+	  wx.navigateTo({url:'/pages/detail/detail'}); 
   },
 
   swipeChange : function(e){

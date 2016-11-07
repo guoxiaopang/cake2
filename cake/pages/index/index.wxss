@@ -1,46 +1,38 @@
 .image_frame{
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
-.section{
-    background: red;
-    width: 25%;
-    height: 60%;
-    position: absolute;
-    display: -webkit-flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    float: left;
-}
-
-.section__title{
-    height: 100%;
-}
-
-.flex-wrap{
+.content{
 	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	
 }
+
+.left{
+	flex: 2.5;
+	height: 500rpx;
+}
+
+.right{
+	flex: 7;
+	height: 500rpx;
+}
+
+/*左边菜品分类*/
 
 .flex-item{
 	flex: 1;  /*表示都有相同的长度 忽略他们的内容*/
 }
-
-.flex-wrap.flex-direction-col{
-	flex-direction: column; /* 垂直显示*/
-}
-
-.flex-wrap.flex-direction-row{
-	flex-direction: row;
-}
-
 
 .aside{
 	width:5rem;
 	border-right: 1px solid #ddd;
 	font-size: .85rem;
 	background: #f5f5f5;
-	
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .type-nav{
@@ -56,8 +48,83 @@
 	padding-left:-1px;
 	color: #333;
 	background-color: #fff;
-	border-left-width: 2px;
-	border-left-color: red;
+	border-left: 4rpx;
 	border-left-style: solid;
+	border-left-color: red;
 }
 
+.imageItem{
+	width: 50px;
+	height: 50px;
+}
+
+.dish{
+	margin-left: 0.01rem;
+	padding: 1rem;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+}
+
+.dish .title{
+	display: block;
+	font-size: 0.8rem;
+	font-weight: bolder;
+	margin-bottom: 20rpx;
+	margin-left: 20rpx;
+}
+
+.dish .price{
+	color: red;
+	font-size: 0.8rem;
+	font-weight: bolder;
+	margin-top: 0.5rem;
+	margin-left: 20rpx;
+}
+
+.titleItem{
+	margin-top: 10rpx;
+	width: 360rpx;
+}
+
+.price_add{
+	display: flex;
+	justify-content:space-between;
+	
+}
+
+.add{
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.shop{
+	/*background-color: springgreen;*/
+	position: absolute;
+	width: 100%;
+	height: 100rpx;
+	bottom: 0rpx;
+	border-top-color: #eeeeee;
+	border-top-style: solid;
+	border-top-width: 1rpx;
+
+}
+
+.totalPrice{
+	position: absolute;
+	text-align: center;
+	/*background-color: red;*/
+	margin-left: 50rpx;
+	margin-top: 25rpx;
+	color: red;
+}
+
+.totalButton{
+	border-radius: 0;
+	width: 200rpx;
+	height: 100rpx;
+	text-align: center;
+	float: right;
+}

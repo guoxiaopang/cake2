@@ -1,19 +1,47 @@
-	<!--滑动条-->
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+
+
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}" wx:key="unique">
     <swiper-item>
       <image class="image_frame" src="{{item}}" mode="aspectFill"> </image>  
     </swiper-item>
     </block>
 </swiper>
-
-<view class="section">
-  <scroll-view scroll-y="true" class="section__title">
-       <view class="aside flex-wrap flex-direction-col">
-		   <block wx:for="{{navList}}" wx:key="leftList">
-		  	<text class="type-nav {{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</text>
-	  	</block>
-      	</view>
-  </scroll-view>
 </view>
+
+<!--滚动视图-->
+<view class="content">
+    <!--左边菜单-->
+    <view class=" left ">
+        <view class="aside  flex-direction-col">
+	    	<block wx:for="{{navList}}" wx:key="leftList">
+			      <text class="type-nav {{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</text>
+		    </block>
+</view>
+ </view>
+
+    <!--右边菜单-->
+    <view class=" right">
+        <view class="content flex-item">
+		<block wx:for="{{dishesList[curIndex]}}" wx:key = "rightList">
+			<view class="dish" catchtap="selectDish">
+				<image class="imageItem"  src="{{item.img}}"></image>
+                <view class="titleItem">
+                     <text class="title">{{item.name}}</text>
+                     <view class = "price_add">
+                        <text class="price">￥{{item.price}}</text>
+                        <image src="Add.png" class="add"> </image>
+                     </view>
+                </view>
+			</view>
+		</block>
+	</view>
+    </view>
+</view>
+
+<view class = "shop">
+	<text class = "totalPrice" >￥{{totalPrice}}</text>
+	<button type="primary" class = "totalButton" disabled="{{disabled}}" bindtap="primary"> 去结算 </button>
+</view>	
+
