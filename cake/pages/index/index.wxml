@@ -31,7 +31,12 @@
                      <text class="title">{{item.name}}</text>
                      <view class = "price_add">
                         <text class="price">￥{{item.price}}</text>
-                        <image src="Add.png" class="add"> </image>
+                        <view class="add_delete">
+                        <image src="delete.png" class="add" catchtap="deleteClick" data-price="{{item.price}}" data-name="{{item.name}}"> </image>
+                        <text class="count">1</text>
+                        <image src="Add.png" class="add" catchtap="addClick" data-price="{{item.price}}" data-name="{{item.name}}"> </image>
+                        </view>
+    
                      </view>
                 </view>
 			</view>

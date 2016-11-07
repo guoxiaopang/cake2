@@ -128,3 +128,20 @@
 	text-align: center;
 	float: right;
 }
+
+.add_delete{
+	width: 160rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.add{
+	width: 50rpx;
+	height: 50rpx;
+}
+
+.count{
+	text-align: center;
+
+}

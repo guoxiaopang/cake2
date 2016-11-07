@@ -5,7 +5,7 @@ Page({
 		curIndex:0,
 		cart:[],
 		cartTotal:0,
-		totalPrice:1234.12,
+		totalPrice:0,
 
 		imgUrls: [
      	 'https://pixabay.com/static/uploads/photo/2016/10/16/20/10/sunset-1746167_960_720.jpg',
@@ -211,5 +211,21 @@ Page({
 		curIndex:index
 	})
 	},
+	// 单机添加物品
+	addClick :function(e){
+		var price = this.data.totalPrice;
+		price = parseFloat(e.target.dataset.price) + parseFloat(price);
+		this.setData({totalPrice : price});
+		console.log(price);
+	},
+	deleteClick :function(e){
+		var price = this.data.totalPrice;
+		price = parseFloat(price) - parseFloat(e.target.dataset.price);
+		if(price <0){
+			price = 0;
+		}
+		this.setData({totalPrice : price});
+		console.log(price);
+	}
 })
 
