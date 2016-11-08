@@ -64,22 +64,22 @@ Page({
 				{
 					name:"长大才吃蒜泥白肉",
 					price:20,
-					num:1,
-					id:1,
+					num:0,
+					id:10,
 					img:'icon.jpeg'
 				},
 				{
 					name:"青年不羁川湘卤鸭",
 					price:18,
-					num:1,
-					id:29,
+					num:0,
+					id:11,
 					img:'icon.jpeg'
 				},
 				{
 					name:"时而想念口水鸡",
 					price:23,
-					num:1,
-					id:2,
+					num:0,
+					id:12,
 					img:'icon.jpeg'
 				}
 			],
@@ -87,22 +87,22 @@ Page({
 				{
 					name:"沙茶肥牛逼格饭",
 					price:24,
-					num:1,
-					id:3,
+					num:0,
+					id:20,
 					img:'icon.jpeg'
 				},
 				{
 					name:"咖喱肥牛逼隔饭",
 					price:25,
-					num:1,
-					id:4,
+					num:0,
+					id:21,
 					img:'icon.jpeg'
 				},
 				{
 					name:"黑椒肥牛逼隔饭",
 					price:26,
-					num:1,
-					id:4,
+					num:0,
+					id:22,
 					img:'icon.jpeg'
 				}
 			],
@@ -110,15 +110,15 @@ Page({
 				{
 					name:"红油辣椒肥牛饭",
 					price:24,
-					num:1,
-					id:5,
+					num:0,
+					id:30,
 					img:'icon.jpeg'
 				},
 				{
 					name:"青红双椒肥牛饭",
 					price:26,
-					num:1,
-					id:6,
+					num:0,
+					id:31,
 					img:'icon.jpeg'
 				}
 			],
@@ -126,22 +126,22 @@ Page({
 				{
 					name:"年华正好(薄荷柠檬苏打水)",
 					price:12,
-					num:1,
-					id:5,
+					num:0,
+					id:40,
 					img:'icon.jpeg'
 				},
 				{
 					name:"很久以前(百香果水果茶)",
 					price:13,
-					num:1,
-					id:6,
+					num:0,
+					id:41,
 					img:'icon.jpeg'
 				},
 				{
 					name:"那年夏天(薄荷咸柠檬七)",
 					price:13,
-					num:1,
-					id:6,
+					num:0,
+					id:42,
 					img:'icon.jpeg'
 				}
 			],
@@ -149,36 +149,36 @@ Page({
 				{
 					name:"卤个翅膀飞往梦想",
 					price:20,
-					num:1,
-					id:5,
+					num:0,
+					id:50,
 					img:'icon.jpeg'
 				},
 				{
 					name:"花言巧语香卤猪舌",
 					price:21,
-					num:1,
-					id:6,
+					num:0,
+					id:51,
 					img:'icon.jpeg'
 				},
 				{
 					name:"肥而不腻香醇卤肉",
 					price:18,
-					num:1,
-					id:6,
+					num:0,
+					id:52,
 					img:'icon.jpeg'
 				},
 				{
 					name:"青春不朽香醇卤鸭",
 					price:17,
-					num:1,
-					id:6,
+					num:0,
+					id:53,
 					img:'icon.jpeg'
 				},
 				{
 					name:"我想和你比翼双飞",
 					price:22,
-					num:1,
-					id:6,
+					num:0,
+					id:54,
 					img:'icon.jpeg'
 				}
 			],
@@ -186,18 +186,83 @@ Page({
 				{
 					name:"放学门外土豆花",
 					price:7,
-					num:1,
-					id:5,
+					num:0,
+					id:60,
 					img:'icon.jpeg'
 				},
 				{
 					name:"青春盎然裙带菜",
 					price:8,
-					num:1,
-					id:6,
+					num:0,
+					id:61,
 					img:'icon.jpeg'
 				}
 			],
+			[
+				{
+					name:"卤个翅膀飞往梦想",
+					price:20,
+					num:0,
+					id:70,
+					img:'icon.jpeg'
+				},
+				{
+					name:"花言巧语香卤猪舌",
+					price:21,
+					num:0,
+					id:71,
+					img:'icon.jpeg'
+				},
+				{
+					name:"肥而不腻香醇卤肉",
+					price:18,
+					num:0,
+					id:72,
+					img:'icon.jpeg'
+				},
+				{
+					name:"青春不朽香醇卤鸭",
+					price:17,
+					num:0,
+					id:73,
+					img:'icon.jpeg'
+				},
+				{
+					name:"我想和你比翼双飞",
+					price:22,
+					num:0,
+					id:74,
+					img:'icon.jpeg'
+				},
+				{
+					name:"花言巧语香卤猪舌",
+					price:21,
+					num:0,
+					id:75,
+					img:'icon.jpeg'
+				},
+				{
+					name:"肥而不腻香醇卤肉",
+					price:18,
+					num:0,
+					id:76,
+					img:'icon.jpeg'
+				},
+				{
+					name:"青春不朽香醇卤鸭",
+					price:17,
+					num:0,
+					id:77,
+					img:'icon.jpeg'
+				},
+				{
+					name:"我想和你比翼双飞",
+					price:22,
+					num:0,
+					id:78,
+					img:'icon.jpeg'
+				}
+			]
 		],
     
     indicatorDots: true,
@@ -224,19 +289,58 @@ Page({
 	})
 	},
 	// 单机添加物品
-	addClick :function(e){
+	addClick :function(e){	
+	// 获取id
+		var id = e.target.dataset.nameid;
+		var item = this.data.dishesList
+		// 添加数量
+		for (var i = 0 ;i < item.length; i++){
+			var array = item[i];
+			for(var j = 0; j < array.length; j++){
+				var dict = array[j];
+				if(dict.id == id){
+					console.log(dict.name);
+					dict.num++;
+					this.setData({dishesList:item});
+					break;
+				}
+			}
+		}
 		var price = this.data.totalPrice;
 		price = parseFloat(e.target.dataset.price) + parseFloat(price);
 		this.setData({totalPrice : price});
-		console.log(price);
+
 	},
+
 	deleteClick :function(e){
+
+						// 获取id
+		var id = e.target.dataset.nameid;
+		var item = this.data.dishesList
+		// 添加数量
+		for (var i = 0 ;i < item.length; i++){
+			var array = item[i];
+			for(var j = 0; j < array.length; j++){
+				var dict = array[j];
+				if(dict.id == id){
+					dict.num--;
+					if (dict.num < 0){
+						dict.num = 0;
+						return;
+					}
+					this.setData({dishesList:item});
+					break;
+				}
+			}
+		}
+
 		var price = this.data.totalPrice;
 		price = parseFloat(price) - parseFloat(e.target.dataset.price);
 		if(price <0){
 			price = 0;
 		}
 		this.setData({totalPrice : price});
-		console.log(price);
+		
+
 	}
 })
