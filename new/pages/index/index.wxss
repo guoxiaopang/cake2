@@ -1,29 +1,3 @@
-.shop{
-	position: absolute;
-	width: 100%;
-	height: 100rpx;
-	bottom: 0rpx;
-	border-top-color: #eeeeee;
-	border-top-style: solid;
-	border-top-width: 1rpx;
-
-}
-
-.totalPrice{
-	position: absolute;
-	text-align: center;
-	margin-left: 50rpx;
-	margin-top: 25rpx;
-	color: red;
-}
-
-.totalButton{
-	border-radius: 0;
-	width: 200rpx;
-	height: 100rpx;
-	text-align: center;
-	float: right;
-}
 
 .image_frame{
     width: 100%;
@@ -65,6 +39,7 @@
 	text-align: center;
 	border-bottom: 1px solid #ddd;
 	z-index: 10;
+	background-color: #eee;
 }
 
 .type-nav.selected{
@@ -161,4 +136,62 @@
 
 .flex-item{
 	flex: 1;  /*表示都有相同的长度 忽略他们的内容*/
+}
+
+.shop{
+	position: absolute;
+	width: 100%;
+	height: 100rpx;
+	bottom: 0rpx;
+	border-top-color: #eeeeee;
+	border-top-style: solid;
+	border-top-width: 1rpx;
+}
+
+.totalButton{
+	border-radius: 0;
+	width: 30%;
+	height: 100rpx;
+	text-align: center;
+	float: right;
+}
+
+.downLeft{
+	position: absolute;
+	/*background-color: silver;*/
+	left: 0px;
+	width: 70%;
+	height: 100%;
+
+}
+
+.totalPrice{
+	position: absolute;
+	/*background-color: burlywood;*/
+	text-align: center;
+	margin-left: 180rpx;
+	margin-top: 25rpx;
+	color: red;
+}
+
+.buttomShopImage{
+	position: absolute;
+	width: 200rpx;
+	height: 200rpx;
+	left: 75rpx;
+	bottom: -75rpx;
+	z-index: 10;
+}
+
+.buttomShopImage text{
+	position: absolute;
+	background-color: red;
+	text-align: center;
+	padding-top: 10rpx;
+	color: white;
+	width: 50rpx;
+	height: 50rpx;
+	font-size: 20rpx;
+	/*border-radius: 50%;*/
+	margin-left: -8rpx;
 }

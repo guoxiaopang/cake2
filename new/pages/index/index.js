@@ -6,6 +6,8 @@ Page({
 		cart:[],
 		cartTotal:0,
 		totalPrice:0,
+		//购物车
+		shopCart:[],
 
 		imgUrls: [
      	 'https://pixabay.com/static/uploads/photo/2016/10/16/20/10/sunset-1746167_960_720.jpg',
@@ -288,6 +290,8 @@ Page({
 		curIndex:index
 	})
 	},
+
+	// ========================数据写到一个公共的属性里面去=========================
 	// 单机添加物品
 	addClick :function(e){	
 	// 获取id
@@ -302,6 +306,15 @@ Page({
 					console.log(dict.name);
 					dict.num++;
 					this.setData({dishesList:item});
+
+					var list = this.data.shopCart;
+					list.push(id);
+					this.setData({shopCart:list});
+					// // 存到购物车
+					// wx.setStorage({
+  					// 	key:"shopCart",
+  					// 	data:[]
+					// });
 					break;
 				}
 			}
@@ -314,7 +327,7 @@ Page({
 
 	deleteClick :function(e){
 
-						// 获取id
+		// 获取id
 		var id = e.target.dataset.nameid;
 		var item = this.data.dishesList
 		// 添加数量
@@ -327,6 +340,13 @@ Page({
 					if (dict.num < 0){
 						dict.num = 0;
 						return;
+					};
+					var list = this.data.shopCart;
+					for (var k = 0; k < list.lenght; k++){
+						if(id == list[k]){
+							list.split(k,1);
+							this.setData({shopCart:list});
+						}
 					}
 					this.setData({dishesList:item});
 					break;
