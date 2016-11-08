@@ -52,7 +52,7 @@
 }
 
 .aside{
-	width:rem;
+	width:4.5rem;
 	border-right: 1px solid #ddd;
 	font-size: .85rem;
 	display: flex;
