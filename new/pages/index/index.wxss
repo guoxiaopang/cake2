@@ -32,7 +32,6 @@
 }
 
 .content{
-    background-color: cyan;
     position: absolute;
     top: 150px;
     bottom: 100rpx;
@@ -48,7 +47,7 @@
 
 .right{
     position: absolute;
-    margin-left: 25%;
+    margin-left: 26%;
     background-color: chartreuse;
     width: 75%;
     top: 0%;
@@ -80,4 +79,66 @@
 	border-left: 4rpx;
 	border-left-style: solid;
 	border-left-color: red;
+}
+
+/*cell*/
+.rithtContent{
+	background-color: sandybrown;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10rpx;
+	margin-left: 10rpx;
+}
+
+.imageItem{
+	background-color: orchid;
+	width: 50px;
+	height: 50px;
+	padding: 20rpx;
+}
+
+.dish{
+	margin-left: 0.01rem;
+	padding: 1rem;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+}
+
+.dish .title{
+	display: block;
+	font-size: 0.8rem;
+	font-weight: bolder;
+	margin-bottom: 20rpx;
+	margin-left: 20rpx;
+}
+
+.dish .price{
+	color: red;
+	font-size: 0.8rem;
+	font-weight: bolder;
+	margin-top: 0.5rem;
+	margin-left: 20rpx;
+}
+
+.titleItem{
+	margin-top: 10rpx;
+	width: 360rpx;
+}
+
+.price_add{
+	display: flex;
+	justify-content:space-between;
+	
+}
+
+.add{
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.flex-item{
+	flex: 1;  /*表示都有相同的长度 忽略他们的内容*/
 }

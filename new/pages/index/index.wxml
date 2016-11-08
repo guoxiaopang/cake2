@@ -20,10 +20,41 @@
          </scroll-view>
     </view>
     <!--右边-->
-    <view class="right"></view>
+    <view class="right">
+            <scroll-view scroll-y="true" style="height: 400rpx;">
+                    
+                            <block wx:for="{{dishesList[curIndex]}}" wx:key = "rightList">
+                                    <view class="rithtContent flex-item">
+                                         <image class="imageItem"  src="{{item.img}}"></image>
+                                    </view>
+                            </block>
+                    
+             </scroll-view>
+    </view>
 </view>
 
 <view class = "shop">
 	<text class = "totalPrice" >￥{{totalPrice}}</text>
 	<button type="primary" class = "totalButton" disabled="{{disabled}}" bindtap="primary"> 去结算 </button>
 </view>	
+
+
+<!--<view class="content flex-item">
+		<block wx:for="{{dishesList[curIndex]}}" wx:key = "rightList">
+			<view class="dish" catchtap="selectDish">
+				<image class="imageItem"  src="{{item.img}}"></image>
+                <view class="titleItem">
+                     <text class="title">{{item.name}}</text>
+                     <view class = "price_add">
+                        <text class="price">￥{{item.price}}</text>
+                        <view class="add_delete">
+                        <image src="delete.png" class="add" catchtap="deleteClick" data-price="{{item.price}}" data-name="{{item.name}}"> </image>
+                        <text class="count">1</text>
+                        <image src="Add.png" class="add" catchtap="addClick" data-price="{{item.price}}" data-name="{{item.name}}"> </image>
+                        </view>
+    
+                     </view>
+                </view>
+			</view>
+		</block>
+	</view>-->
