@@ -195,6 +195,7 @@ Page({
   },
   selectDish : function(e)
   {
+	  console.log(e)
 	  wx.navigateTo({url:'/pages/detail/detail'}); 
   },
 

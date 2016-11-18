@@ -22,9 +22,8 @@
     <!--右边-->
     <view class="right">
             <scroll-view scroll-y="true" style="height: 100%;">
-                    
                             <block wx:for="{{dishesList[curIndex]}}" wx:key = "rightList">
-                                    <view class="rithtContent flex-item">
+                                    <view data-nameid="222" class="rithtContent flex-item"  catchtap="clickCell" >
                                          <image class="imageItem"  src="{{item.img}}"></image>
                                          <view  class="titleItem">
                                                  <text class="title">{{item.name}}</text>

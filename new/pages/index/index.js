@@ -342,10 +342,11 @@ Page({
 						return;
 					};
 					var list = this.data.shopCart;
-					for (var k = 0; k < list.lenght; k++){
+					for (var k = 0; k < list.length; k++){
 						if(id == list[k]){
-							list.split(k,1);
+							list.splice(k,1);
 							this.setData({shopCart:list});
+							break;
 						}
 					}
 					this.setData({dishesList:item});
@@ -360,7 +361,9 @@ Page({
 			price = 0;
 		}
 		this.setData({totalPrice : price});
-		
-
+	},
+	clickCell:function(event){
+		console.log("点击cell");
+		console.log(event.target.dataset);
 	}
 })

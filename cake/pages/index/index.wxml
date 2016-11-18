@@ -18,14 +18,14 @@
 	    	<block wx:for="{{navList}}" wx:key="leftList">
 			      <text class="type-nav {{curNav == item.id ? 'selected' : ''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</text>
 		    </block>
-</view>
+        </view>
  </view>
 
     <!--右边菜单-->
     <view class=" right">
         <view class="content flex-item">
 		<block wx:for="{{dishesList[curIndex]}}" wx:key = "rightList">
-			<view class="dish" catchtap="selectDish">
+			<view class="dish" catchtap="selectDish" data="aaa">
 				<image class="imageItem"  src="{{item.img}}"></image>
                 <view class="titleItem">
                      <text class="title">{{item.name}}</text>
